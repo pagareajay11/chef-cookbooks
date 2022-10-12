@@ -1,0 +1,18 @@
+#
+# Cookbook:: apache-installation
+# Recipe:: apache
+#
+# Copyright:: 2022, The Authors, All Rights Reserved.
+package 'nginx' do
+action :install
+end
+
+file '/var/www/html/index.html' do
+content 'Welcome to Technical Guftgu'
+action :create
+end
+
+
+service 'apache2' do
+action [:enable, :start]
+end
