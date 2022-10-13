@@ -4,6 +4,6 @@
 #
 # Copyright:: 2022, The Authors, All Rights Reserved.
 
-file 'c:\chef\cache\package\ajay.txt' do
+file 'c:\chef\cache\package\ChromeSetup.exe' do
     action :delete
 end

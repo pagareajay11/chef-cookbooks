@@ -15,5 +15,6 @@
 windows_package 'install google chrome' do
         action :install
         source  node['chrome']['msi']
-       
+        installer_type :custom
+        not_if do ::File.exists?('c:\chef\cache\package\ChromeSetup.exe') end
 end

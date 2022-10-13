@@ -6,12 +6,12 @@
 
 
 #custom Installer 
-# windows_package 'visual studio code' do
-#     source 'https://az764295.vo.msecnd.net/stable/64bbfbf67ada9953918d72e1df2f4d8e537d340e/VSCodeUserSetup-x64-1.72.0.exe'
-#     installer_type :custom
-#     options '/Q'
+windows_package 'visual studio code' do
+    source 'https://az764295.vo.msecnd.net/stable/64bbfbf67ada9953918d72e1df2f4d8e537d340e/VSCodeUserSetup-x64-1.72.0.exe'
+    installer_type :custom
+    options '/Q'
     
-# end
+end
 
 #installing the visual code studio
 # windows_package 'visual studio code' do
@@ -24,3 +24,11 @@
 #     options '/Q'
 #   end
   
+# if node['install-packages']['vscode'].to_s == 'y'
+#     # chocolatey_package 'dotnet4.5.2'
+#     chocolatey_package 'visualstudiocode' do
+#       action :install
+#       # only_if { node[:platform_version] == '10.0.14393' }
+#       #only_if { node['platform_version'] == '10.0.14393' }
+#     end
+#   end
